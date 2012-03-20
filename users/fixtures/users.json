@@ -1,0 +1,51 @@
+[
+  { "fields" : {
+        "date_joined" : "2011-03-16 20:57:56",
+        "email" : "contact@josezambrana.com",
+        "first_name" : "Jose Maria",
+        "groups" : [  ],
+        "is_active" : true,
+        "is_staff" : true,
+        "is_superuser" : true,
+        "last_login" : "2011-03-30 20:42:22",
+        "last_name" : "Zambrana",
+        "password" : "sha1$4b14b$1875933b7fc6a7f33f88326afae907e914662cc0",
+        "user_permissions" : [  ],
+        "username" : "admin"
+      },
+    "model" : "auth.user",
+    "pk" : 1
+  },
+  { "fields" : { "date_joined" : "2011-03-30 02:54:48",
+        "email" : "test@jumppe.com",
+        "first_name" : "Testac",
+        "groups" : [  ],
+        "is_active" : true,
+        "is_staff" : false,
+        "is_superuser" : false,
+        "last_login" : "2011-03-31 01:10:41",
+        "last_name" : "Count",
+        "password" : "sha1$2f760$df5b87c1ec8ddc1045673b75433aa8d04455b562",
+        "user_permissions" : [  ],
+        "username" : "testaccount"
+      },
+    "model" : "auth.user",
+    "pk" : 2
+  },
+  { "fields" : { "date_joined" : "2011-04-06 23:12:54",
+        "email" : "zero.fuxor@gmail.com",
+        "first_name" : "Zero",
+        "groups" : [  ],
+        "is_active" : true,
+        "is_staff" : false,
+        "is_superuser" : false,
+        "last_login" : "2011-04-06 23:12:54",
+        "last_name" : "Fuxor",
+        "password" : "sha1$4b14b$1875933b7fc6a7f33f88326afae907e914662cc0",
+        "user_permissions" : [  ],
+        "username" : "zero"
+      },
+    "model" : "auth.user",
+    "pk" : 3
+  }
+]

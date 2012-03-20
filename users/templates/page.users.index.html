@@ -1,0 +1,33 @@
+{% extends 'base/layout.html' %}
+{% load i18n base thumbnails_tags humanize %}
+
+
+{% block pagetitle %}{% trans 'Gente' %} - {{ block.super }}{% endblock %}
+
+
+{% block beforewrapper %}{% endblock %}
+
+
+{% block content %}
+<h1 class="page-title">{% trans 'Gente' %}</h1>
+<div class="clearfix">
+    <ul id="people" class="clearfix">
+        {% for user in object_list %}
+        {% with user_profile=profiles_dict|hash:user.id %}
+        <li class="user-object">
+            <a class="avatar span" href="{{ user_profile.get_absolute_url }}">
+                <img src='{% thumbnail_url user_profile "s" %}' />
+            </a>
+            <a class="name span last" href="{{ user_profile.get_absolute_url }}">
+                {{ user.first_name }}<br/>
+                {{ user.last_name }}
+            </a>
+            <span class="username span last">{{ user.username }}</span>
+        </li>
+        {% endwith %}
+        {% endfor %}
+    </ul>
+    
+    {% include 'pagination/basic.html' %}
+</div>
+{% endblock %}

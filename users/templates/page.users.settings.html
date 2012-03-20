@@ -1,0 +1,31 @@
+{% extends 'base/layout.html' %}
+{% load i18n %}
+
+
+{% block bodyclass %}{{block.super}} small withmenu{% endblock %}
+
+
+{% block beforewrapper %}
+<div id="menubarwrapper" class="container corner">
+    <div id="menubar" class="menubar clearfix">
+        <ul class="menu">
+            <li class="{% if view_name == 'users-account' %}current{% endif %}">
+                <a href="{% url users_account %}">Cuenta</a>
+            </li>
+            <li class="{% if view_name == 'users-personal' %}current{% endif %}">
+                <a href="{% url users_personal %}">Personal</a>
+            </li>
+            <li class="{% if view_name == 'users-design' %}current{% endif %}">
+                <a href="{% url users_design %}">Dise&ntilde;o</a>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block mainmenu %}{% endblock %}
+
+
+{% block content %}
+    {% include 'form.users.settings.html' %}
+{% endblock %}

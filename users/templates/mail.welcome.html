@@ -1,0 +1,42 @@
+{% extends 'email/email_base_notification.html' %}
+
+{% block body %}
+<h1 style="font-size: 2em; color: #fff;">Hey! que tal?</h1>
+<p>
+    Gracias por formar parte de {{ SITE_NAME }} te compartimos algunos datos
+    importantes:
+</p>
+<p style="padding: 0.5em 1em; background: #444; -moz-border-radius: 10px; border-radius: 10px;">
+    <strong>Nombre de usuario</strong>: 
+        {{ user.username }}<br/>
+    <strong>Perfil</strong>: 
+    <a href="http://{{ user.username }}.{{ DOMAIN }}" 
+        style="color: #FF8D01" >http://{{ user.username }}.{{ DOMAIN }}</a>
+</p>
+
+<h2 style="font-size: 1.5em; color: #fff;">Qu&eacute; es Webeando.me?</h2>
+<p>
+    Webeando.me es un comunidad de usuarios que gustan explorar y compartir
+    contenido entretenido en su tiempo libre... un sitio para webearse ;-)
+</p>
+
+<h2 style="font-size: 1.5em; color: #fff;">Cuales son las reglas?</h2>
+<ul>
+    <li><strong>Diviertete</strong>: Todo es por diversi&oacute;n. &Uacute;nete
+        y disfruta!</li>
+    <li><strong>Comparte</strong>: La mejor forma de entretenerse y divertirse
+        es compartiendo contenido con los demas. Comparte tu tambien.</li>
+    <li><strong>Respeta</strong>: Divertirse no significa burlarse de otras
+        personas. Respeta a los demas.</li>
+    <li><strong>Copyright</strong>: Comparte contenidos del que eres propietario
+        o adjunta el enlace de la fuente. Respeta los derechos de autor.</li>
+    <li><strong>No repitas</strong>: Si alguien ya comparti&oacute; un contenido, no
+        vuelvas a compartirlo nuevamente.</li>
+</ul>
+
+<p>
+  Gracias,<br/>
+  <span style="color:#888">El equipo de {{ SITE_NAME }}</span>
+</p>
+
+{% endblock %}

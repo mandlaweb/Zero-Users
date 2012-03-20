@@ -1,0 +1,22 @@
+{% extends 'forms/form.html' %}
+{% load i18n %}
+
+{% block beforeform%}
+  <div class="social-fb highlight corner-small clearfix">
+    <a href="{% url socialauth_login %}"
+       class="button">Con&eacute;ctate con Facebook</a>
+  </div>
+  <p class="login-help-text">
+     ...o con tu cuenta webeando.me:
+  </p>
+{% endblock %}
+
+{% block class_form %}users-login{% endblock %}
+
+{% block button %}{% trans 'Entrar' %}{% endblock %}
+
+{% block afterbutton %}
+  <span id="lost-password" class="lost-password float-right">
+      <a href="{% url password_reset %}">Perdiste tu contrase&ntilde;a?</a>
+  </span>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'page.webeos.index.html' %}
+{% load i18n thumbnails_tags %}
+
+{% block headdescription %}Webeos, imagenes graciosas, fotos divertidas subidas por {{ object.first_name }} {{ object.last_name }} - {{ object.username }} - {{ SITE_NAME }}{% endblock %}
+
+{% block pagetitle %}{{ object.first_name }} ({{ object.username }}) - {{ block.super }}{% endblock %}
+{% block bodyclass %}{{block.super}} withmenu{% endblock %}
+
+
+{% block contenttitle %}{% endblock %}
+
+
+{% block beforecontentzone %}
+<div id="user-data" class="user-data clearfix corner">
+    <div class="avatar span">
+        <a href="{% url users_profile object.username %}">
+            <img src="{% thumbnail_url user_profile "m" %}"
+            alt="{{ object.username }}" />
+        </a>
+    </div>
+    <div class="user-info span last">
+        <h1 class="title">
+            {{ object.first_name}}
+            ({{ object.username }})
+        </h1>
+
+        {% if user_profile.description %}
+        <p class='description'>
+            {{ user_profile.description }}`
+        </p>
+        {% endif %}
+
+        {% if user_profile.url %}
+            <a href="{{ user_profile.url }}">{{ user_profile.url }}</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+

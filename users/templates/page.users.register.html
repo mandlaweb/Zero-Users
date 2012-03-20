@@ -1,0 +1,11 @@
+{% extends 'base/layout.html' %}
+
+
+{% block bodyclass %}{{block.super}} small{% endblock %}
+{% block beforewrapper %}{% endblock %}
+{% block mainmenu %}{% endblock %}
+
+
+{% block content %}
+  {% include 'form.users.register.html' %}
+{% endblock %}
