@@ -1,6 +1,6 @@
-===========
-Zero Common
-===========
+============
+Zero Users
+============
 
 Another simple app to manage profiles in django.
 
